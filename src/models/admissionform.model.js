@@ -12,7 +12,7 @@ const admissionFormSchema = new mongoose.Schema(
 
     course: {
       courseName: { type: String, required: true },
-      courseCode: { type: String, required: true }
+      courseCode: { type: String,}
     }
   },
   { timestamps: true }
