@@ -9,7 +9,6 @@ const admissionFormSchema = new mongoose.Schema(
     phoneNo:       { type: String, required: true },
     contactNo:     { type: String },
     email:         { type: String, required: true },
-
     course: {
       courseName: { type: String, required: true },
       courseCode: { type: String,}
