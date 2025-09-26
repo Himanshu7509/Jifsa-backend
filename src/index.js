@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/form',formRouter)
-app.use('/complain',complainFormRouter)
+app.use('/complaint',complainFormRouter)
 
 
 app.listen(PORT, async () => {

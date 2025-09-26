@@ -8,7 +8,8 @@ const formSchema = new mongoose.Schema({
   message:   { type: String },
   fatherName:{ type: String },
   dob:       { type: Date },
-  contactNo: { type: String }
+  contactNo: { type: String },
+  productCompany: { type: String, default: "JIFSA" }
 });
 
 const Form = mongoose.model("Form", formSchema);
