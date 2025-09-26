@@ -1,21 +1,22 @@
-import express from 'express';
-import cors from "cors"
-import dbConnect from './utils/mongodb.js';
-import { PORT } from './config/config.js';
-import formRouter from './routes/form.route.js';
-import complainFormRouter from './routes/complainform.route.js';
+import express from "express";
+import cors from "cors";
+import dbConnect from "./utils/mongodb.js";
+import { PORT } from "./config/config.js";
+import formRouter from "./routes/form.route.js";
+import complainFormRouter from "./routes/complainform.route.js";
+import admissionRouter from "./routes/admissionform.route.js";
 
-const app = express()
+const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/form',formRouter)
-app.use('/complaint',complainFormRouter)
-
+app.use("/form", formRouter);
+app.use("/complaint", complainFormRouter);
+app.use("/admission-form", admissionRouter);
 
 app.listen(PORT, async () => {
-    console.log(` API is running on http://localhost:${PORT}`);
-   await dbConnect()
+  console.log(` API is running on http://localhost:${PORT}`);
+  await dbConnect();
 });
 
 export default app;

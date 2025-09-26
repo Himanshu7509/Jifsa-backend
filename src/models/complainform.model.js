@@ -6,6 +6,8 @@ const formComplainSchema = new mongoose.Schema({
   phoneNo:   { type: String, required: true },
   message:   { type: String, required: true },
   studentId:{ type: String, required: true},
+},{
+    timestamps: true
 });
 
 const ComplainForm = mongoose.model("ComplainForm", formComplainSchema);
