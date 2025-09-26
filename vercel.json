@@ -1,15 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "src/vercel-handler.js",
-      "use": "@vercel/node"
-    }
+    { "src": "src/index.js", "use": "@vercel/node" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "src/vercel-handler.js"
-    }
+    { "src": "/(.*)", "dest": "src/index.js" }
   ]
 }
