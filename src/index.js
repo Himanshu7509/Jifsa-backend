@@ -11,6 +11,10 @@ app.use('/post',formRouter)
 app.use('/get',formRouter)
 app.use('/delete',formRouter)
 
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
 app.listen(PORT, async () => {
     console.log(` API is running on http://localhost:${PORT}`);
     await dbConnect()
